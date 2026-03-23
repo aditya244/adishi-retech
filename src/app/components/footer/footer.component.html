@@ -1,0 +1,109 @@
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container footer-grid">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon-sm">
+            <span class="li-a"></span>
+          </div>
+          <div>
+            <span class="fn-name">ADISHI</span>
+            <span class="fn-sub">RETECH SOLUTIONS PVT. LTD.</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          Bengaluru's most trusted platform for certified refurbished IT equipment and professional repair services.
+        </p>
+        <div class="footer-contact">
+          <a href="tel:+919999999999" class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 99999 99999</span>
+          </a>
+          <a href="mailto:hello@adishiretech.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hello@adishiretech.com</span>
+          </a>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Bengaluru, Karnataka, India</span>
+          </div>
+        </div>
+        <div class="social-row">
+          <a *ngFor="let s of socials" [href]="s.href" [title]="s.label" class="social-btn">
+            <i [class]="s.icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Products</h4>
+        <ul class="footer-links">
+          <li *ngFor="let link of quickLinks">
+            <a [href]="link.href">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Support Links -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Support</h4>
+        <ul class="footer-links">
+          <li *ngFor="let link of supportLinks">
+            <a [href]="link.href">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Our Promise</h4>
+        <div class="footer-badges">
+          <div class="fb-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>6-Month Warranty</strong>
+              <span>On all devices</span>
+            </div>
+          </div>
+          <div class="fb-badge">
+            <i class="fa-solid fa-rotate-left"></i>
+            <div>
+              <strong>15-Day Returns</strong>
+              <span>Hassle-free</span>
+            </div>
+          </div>
+          <div class="fb-badge">
+            <i class="fa-solid fa-certificate"></i>
+            <div>
+              <strong>50-Point Check</strong>
+              <span>Quality certified</span>
+            </div>
+          </div>
+          <div class="fb-badge">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+              <strong>Expert Support</strong>
+              <span>Mon-Sat, 9am-7pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright">
+        © {{ year }} Adishi Retech Solutions Pvt. Ltd. · GST Registered · All rights reserved.
+      </p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>

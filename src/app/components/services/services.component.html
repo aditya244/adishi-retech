@@ -1,0 +1,39 @@
+<section class="services-section" id="services">
+  <!-- Dark background strip -->
+  <div class="services-bg">
+    <div class="bg-mesh-1"></div>
+    <div class="bg-mesh-2"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag light">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        Our Services
+      </div>
+      <h2 class="section-title light">Everything Your IT Needs, <span>Under One Roof</span></h2>
+      <p class="section-sub light">From hardware repair to full refurbishment and trade-ins — Adishi Retech is your complete IT partner.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let s of services" [ngClass]="s.color">
+        <div class="service-header-row">
+          <div class="service-icon">
+            <i [class]="'fa-solid ' + s.icon"></i>
+          </div>
+          <span class="service-price">{{ s.price }}</span>
+        </div>
+        <h3 class="service-title">{{ s.title }}</h3>
+        <p class="service-desc">{{ s.desc }}</p>
+        <div class="service-tags">
+          <span class="tag" *ngFor="let tag of s.tags">{{ tag }}</span>
+        </div>
+        <button class="service-cta">
+          Book Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="card-corner"></div>
+      </div>
+    </div>
+  </div>
+</section>

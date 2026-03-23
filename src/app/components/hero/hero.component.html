@@ -1,0 +1,107 @@
+<section class="hero" id="home">
+  <!-- Background mesh -->
+  <div class="hero-bg">
+    <div class="mesh-1"></div>
+    <div class="mesh-2"></div>
+    <div class="circuit-lines"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <!-- Left: Text -->
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Bengaluru's Trusted IT Re-Commerce Platform
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line-1">Premium</span>
+        <span class="line-2 rotating-word">{{ displayWord }}</span>
+        <span class="line-3">IT Equipment</span>
+      </h1>
+
+      <p class="hero-desc">
+        Buy, sell, and repair laptops & desktops at unbeatable prices.
+        Every device passes our <strong>50-point quality check</strong> before reaching you.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary hero-btn-main">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Browse Products
+        </a>
+        <a href="#services" class="btn-outline hero-btn-sec">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          Repair Services
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-badges">
+        <div class="badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>6-Month Warranty</span>
+        </div>
+        <div class="badge">
+          <i class="fa-solid fa-rotate-left"></i>
+          <span>15-Day Returns</span>
+        </div>
+        <div class="badge">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <span>No-Cost EMI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="hero-visual">
+      <div class="visual-ring outer-ring"></div>
+      <div class="visual-ring mid-ring"></div>
+      <div class="visual-core">
+        <div class="core-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <div class="core-glow"></div>
+      </div>
+
+      <!-- Floating Cards -->
+      <div class="float-card card-0" [style.animationDelay]="floatingCards[0].delay">
+        <div class="card-icon teal"><i class="fa-solid fa-laptop"></i></div>
+        <div class="card-info">
+          <span class="card-name">Dell XPS 13</span>
+          <span class="card-spec">Core i5 · 8GB · 256GB</span>
+        </div>
+        <span class="card-badge green">₹28,999</span>
+      </div>
+
+      <div class="float-card card-1" [style.animationDelay]="floatingCards[1].delay">
+        <div class="card-icon blue"><i class="fa-solid fa-desktop"></i></div>
+        <div class="card-info">
+          <span class="card-name">HP EliteDesk</span>
+          <span class="card-spec">Core i7 · 16GB SSD</span>
+        </div>
+        <span class="card-badge blue">CERTIFIED</span>
+      </div>
+
+      <div class="float-card card-2" [style.animationDelay]="floatingCards[2].delay">
+        <div class="card-icon coral"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div class="card-info">
+          <span class="card-name">Repair Service</span>
+          <span class="card-spec">Same Day Fix</span>
+        </div>
+        <span class="card-badge coral">QUICK</span>
+      </div>
+
+      <!-- Decorative dots -->
+      <div class="dot-grid"></div>
+    </div>
+  </div>
+
+  <!-- Bottom wave -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8fafb"/>
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+.brands-section {
+  background: var(--off-white);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.brands-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--grey-400);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.brands-track-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.brands-track {
+  display: flex;
+  gap: 16px;
+  animation: scroll-brands 28s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll-brands {
+  to { transform: translateX(-50%); }
+}
+
+.brand-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 100px;
+  padding: 10px 22px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-pill:hover {
+  border-color: var(--teal);
+  box-shadow: 0 4px 16px rgba(26,140,111,0.12);
+}
+
+.brand-pill i {
+  font-size: 18px;
+  color: var(--grey-600);
+}
+
+.brand-letter {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--grey-600);
+  min-width: 20px;
+  text-align: center;
+}
+
+.brand-name {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--grey-800);
+}

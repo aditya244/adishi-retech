@@ -1,0 +1,25 @@
+<section class="features-section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">
+        <i class="fa-solid fa-shield-check"></i>
+        Why Choose Adishi
+      </div>
+      <h2 class="section-title">Your Trust is Our <span>Top Priority</span></h2>
+      <p class="section-sub">
+        We don't just sell refurbished equipment — we deliver confidence. Every product is backed by our promise of quality, transparency, and after-sales care.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let f of features" [ngClass]="f.color">
+        <div class="feature-icon">
+          <i [class]="'fa-solid ' + f.icon"></i>
+        </div>
+        <h3 class="feature-title">{{ f.title }}</h3>
+        <p class="feature-desc">{{ f.desc }}</p>
+        <div class="feature-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">
+        <i class="fa-solid fa-quote-left"></i>
+        Customer Stories
+      </div>
+      <h2 class="section-title">Trusted by <span>Thousands</span> Across Bengaluru</h2>
+    </div>
+
+    <div class="testimonial-slider">
+      <!-- Cards -->
+      <div class="testimonial-track">
+        <div class="testimonial-card active" *ngIf="testimonials[active] as t">
+          <div class="tcard-top">
+            <div class="tcard-avatar" [ngClass]="t.avatarColor">{{ t.avatar }}</div>
+            <div class="tcard-meta">
+              <span class="tcard-name">{{ t.name }}</span>
+              <span class="tcard-role">{{ t.role }}</span>
+              <span class="tcard-loc"><i class="fa-solid fa-location-dot"></i> {{ t.location }}</span>
+            </div>
+            <div class="tcard-stars">
+              <i class="fa-solid fa-star" *ngFor="let s of getStars(t.rating)"></i>
+            </div>
+          </div>
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="tcard-text">{{ t.text }}</p>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="slider-controls">
+        <button class="ctrl-btn" (click)="prev()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="dots">
+          <button
+            class="dot-btn"
+            *ngFor="let t of testimonials; let i = index"
+            [class.active]="active === i"
+            (click)="setActive(i)">
+          </button>
+        </div>
+        <button class="ctrl-btn" (click)="next()">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

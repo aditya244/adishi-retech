@@ -1,0 +1,20 @@
+<section class="brands-section">
+  <div class="container">
+    <p class="brands-label">We deal in all major brands</p>
+    <div class="brands-track-wrapper">
+      <div class="brands-track">
+        <div class="brand-pill" *ngFor="let brand of brands">
+          <i *ngIf="brand.icon" [class]="brand.icon"></i>
+          <span *ngIf="brand.letter" class="brand-letter">{{ brand.letter }}</span>
+          <span class="brand-name">{{ brand.name }}</span>
+        </div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="brand-pill" *ngFor="let brand of brands">
+          <i *ngIf="brand.icon" [class]="brand.icon"></i>
+          <span *ngIf="brand.letter" class="brand-letter">{{ brand.letter }}</span>
+          <span class="brand-name">{{ brand.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

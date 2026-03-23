@@ -1,0 +1,37 @@
+<header class="navbar" [class.scrolled]="isScrolled">
+  <div class="container nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">
+        <div class="logo-a">
+          <span class="a-left"></span>
+          <span class="a-right"></span>
+          <span class="a-bar"></span>
+          <div class="orbit"></div>
+        </div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">ADISHI</span>
+        <span class="logo-sub">RETECH SOLUTIONS</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links" [class.open]="isMobileOpen">
+      <a *ngFor="let link of navLinks"
+         [href]="link.href"
+         class="nav-link"
+         (click)="closeMobile()">
+        {{ link.label }}
+      </a>
+      <a href="#contact" class="btn-primary nav-cta" (click)="closeMobile()">
+        <i class="fa-solid fa-phone-volume"></i> Get a Quote
+      </a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button class="hamburger" (click)="toggleMobile()" [class.active]="isMobileOpen" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

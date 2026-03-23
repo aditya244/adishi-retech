@@ -1,0 +1,29 @@
+<section class="hiw-section" id="how-it-works">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">
+        <i class="fa-solid fa-circle-nodes"></i>
+        How It Works
+      </div>
+      <h2 class="section-title">Simple Process, <span>Guaranteed Quality</span></h2>
+      <p class="section-sub" style="margin: 0 auto">From selection to delivery, we've made buying refurbished equipment as simple and trustworthy as possible.</p>
+    </div>
+
+    <div class="steps-track">
+      <div class="steps-connector"></div>
+      <div class="step-item" *ngFor="let step of steps; let i = index" [ngClass]="step.color">
+        <div class="step-bubble">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-icon-wrap">
+            <i [class]="'fa-solid ' + step.icon"></i>
+          </div>
+          <div class="bubble-ring"></div>
+        </div>
+        <div class="step-content">
+          <h3 class="step-title">{{ step.title }}</h3>
+          <p class="step-desc">{{ step.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" *ngFor="let stat of stats; let i = index" [ngClass]="stat.color">
+        <div class="stat-icon">
+          <i [class]="'fa-solid ' + stat.icon"></i>
+        </div>
+        <div class="stat-body">
+          <span class="stat-value">{{ displayValues[i] }}{{ stat.suffix }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+        <div class="stat-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>

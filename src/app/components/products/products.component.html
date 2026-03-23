@@ -1,0 +1,79 @@
+<section class="products-section" id="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <div class="section-tag">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          Our Inventory
+        </div>
+        <h2 class="section-title">Featured <span>Products</span></h2>
+        <p class="section-sub">Certified refurbished devices at up to 60% off retail price.</p>
+      </div>
+      <a href="#" class="btn-outline view-all-btn">
+        View All Products <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-bar">
+      <button
+        *ngFor="let f of filters"
+        class="filter-btn"
+        [class.active]="activeFilter === f.key"
+        (click)="setFilter(f.key)">
+        {{ f.label }}
+      </button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <!-- Badge -->
+        <div class="product-badge" [ngClass]="product.badgeClass">
+          {{ product.badge }}
+        </div>
+
+        <!-- Image Area -->
+        <div class="product-image" [ngClass]="product.category">
+          <i [class]="'fa-solid ' + product.icon"></i>
+          <div class="discount-chip">{{ getDiscount(product.price, product.originalPrice) }}% OFF</div>
+        </div>
+
+        <!-- Body -->
+        <div class="product-body">
+          <div class="product-condition" [ngClass]="product.conditionClass">
+            <i class="fa-solid fa-circle-check"></i>
+            {{ product.condition }} Condition
+          </div>
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-specs">{{ product.specs }}</p>
+
+          <!-- Rating -->
+          <div class="product-rating">
+            <span class="stars">
+              <i class="fa-solid fa-star" *ngFor="let s of getStars(product.rating)"></i>
+            </span>
+            <span class="rating-val">{{ product.rating }}</span>
+            <span class="rating-count">({{ product.reviews }} reviews)</span>
+          </div>
+
+          <!-- Price -->
+          <div class="product-price">
+            <span class="price-current">₹{{ product.price.toLocaleString('en-IN') }}</span>
+            <span class="price-original">₹{{ product.originalPrice.toLocaleString('en-IN') }}</span>
+          </div>
+
+          <!-- Actions -->
+          <div class="product-actions">
+            <button class="btn-primary add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn-wishlist" title="Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
