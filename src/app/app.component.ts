@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       <app-brands-banner></app-brands-banner>
       <app-stats></app-stats>
       <app-features></app-features>
-      <app-products></app-products>
+      <!-- <app-products></app-products> -->
       <app-services></app-services>
       <app-how-it-works></app-how-it-works>
       <app-testimonials></app-testimonials>
