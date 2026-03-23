@@ -1,6 +1,7 @@
 {
-  "buildCommand": "npm run build:prod",
+  "buildCommand": "npx ng build --configuration production",
   "outputDirectory": "dist/adishi-retech-landing",
+  "nodeVersion": "20.x",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
