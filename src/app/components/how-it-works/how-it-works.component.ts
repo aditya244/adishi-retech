@@ -18,7 +18,7 @@ export class HowItWorksComponent {
       step: '02',
       icon: 'fa-clipboard-check',
       title: 'Quality Verified',
-      desc: 'Every device undergoes our 50-point inspection. Battery, display, keyboard, ports, performance — all checked and certified.',
+      desc: 'Every device undergoes our 35-point inspection. Battery, display, keyboard, ports, performance — all checked and certified.',
       color: 'blue'
     },
     {
@@ -32,7 +32,7 @@ export class HowItWorksComponent {
       step: '04',
       icon: 'fa-truck-fast',
       title: 'Delivered to You',
-      desc: 'Doorstep delivery with secure packaging. Free delivery within Bengaluru. Pan-Karnataka shipping available.',
+      desc: 'Doorstep delivery with secure packaging all over India. Pan India shipping available.',
       color: 'green'
     },
   ];

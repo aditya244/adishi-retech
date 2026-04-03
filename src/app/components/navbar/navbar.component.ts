@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
   isMobileOpen = false;
 
   navLinks = [
-    { label: 'Products', href: '#products', icon: 'fa-laptop' },
+    // { label: 'Products', href: '#products', icon: 'fa-laptop' },
     { label: 'Services', href: '#services', icon: 'fa-screwdriver-wrench' },
     { label: 'How It Works', href: '#how-it-works', icon: 'fa-circle-nodes' },
     { label: 'Why Us', href: '#features', icon: 'fa-shield-check' },

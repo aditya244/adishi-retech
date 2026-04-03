@@ -9,7 +9,7 @@ export class ServicesComponent {
   services = [
     {
       icon: 'fa-screwdriver-wrench',
-      title: 'Laptop & Desktop Repair',
+      title: 'Mobile, Laptop & Desktop Repair',
       desc: 'Hardware faults, screen replacements, keyboard repairs, motherboard diagnostics — we fix it all. Quick turnaround, fair pricing.',
       tags: ['Screen Repair', 'Keyboard', 'Motherboard', 'Charging Port'],
       color: 'teal',
@@ -29,7 +29,7 @@ export class ServicesComponent {
       desc: 'Lost data from a crashed drive? Our specialists recover data from SSDs, HDDs, and USBs with industry-grade tools.',
       tags: ['HDD Recovery', 'SSD', 'USB Drives', 'Ransomware'],
       color: 'coral',
-      price: 'Starting ₹799'
+      price: 'Starting ₹999'
     },
     {
       icon: 'fa-wifi',
@@ -51,6 +51,22 @@ export class ServicesComponent {
       icon: 'fa-box-archive',
       title: 'Sell / Trade-In Your Device',
       desc: 'Get the best price for your old laptop or desktop. Instant evaluation, same-day payment. We pick up from your doorstep.',
+      tags: ['Instant Quote', 'Same Day Pay', 'Doorstep Pickup', 'All Brands'],
+      color: 'blue',
+      price: 'Get Instant Quote'
+    },
+    {
+      icon: 'fa-retweet',
+      title: 'Data Wiping & Cleaning',
+      desc: 'Get your devices cleaned with complete formatting and data wiping.',
+      tags: ['Instant Quote', 'Same Day Pay', 'Doorstep Pickup', 'All Brands'],
+      color: 'blue',
+      price: 'Get Instant Quote'
+    },
+    {
+      icon: 'fa-shopping-cart',
+      title: 'Devices Rental',
+      desc: 'Need a laptop, mobile phone or server, rent with us as per your requirement.',
       tags: ['Instant Quote', 'Same Day Pay', 'Doorstep Pickup', 'All Brands'],
       color: 'blue',
       price: 'Get Instant Quote'
